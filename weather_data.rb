@@ -33,14 +33,14 @@ description_next_7 = forecast_data["list"].map { |day| day["weather"].first["mai
 x = 0
 forecast = []
 next_7_days_name.each do |name|
-  forecast << "On #{name}, there will be a low of #{min_next_7[x]}, a high of #{max_next_7[x]} and the sky is #{description_next_7[x]}"
+  forecast << "On #{name}, there will be a low of #{min_next_7[x]}°F, a high of #{max_next_7[x]}°F and the sky is #{description_next_7[x]}"
   x += 1
 end
 
 # DISPLAYED DATA BELOW
 
 puts "-"*75
-puts "The current temperature in San Francisco is #{city_data["main"]["temp"].to_i} degrees, and the sky is #{city_data["weather"].first["main"].downcase}"
+puts "The current temperature in San Francisco is #{city_data["main"]["temp"].to_i}°F, and the sky is #{city_data["weather"].first["main"].downcase}"
 puts "-"*75
 puts "The 7-day forecast in San Francisco is:"
 puts ""
